@@ -15,9 +15,9 @@ fn greet(name: &str) -> String {
 fn main() {
 
     let mut open = CustomMenuItem::new("open".to_string(), "Open");
-    open.keyboard_accelerator = Some("Ctrl+O".to_string());
+    open.keyboard_accelerator = Some("Cmd+O".to_string());
     let mut save = CustomMenuItem::new("save".to_string(), "Save");
-    save.keyboard_accelerator = Some("Ctrl+S".to_string());
+    save.keyboard_accelerator = Some("Cmd+S".to_string());
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
     let submenu = Submenu::new("File", Menu::new()
         .add_item(open)

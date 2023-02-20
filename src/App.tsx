@@ -38,7 +38,7 @@ function App() {
             open({
                 filters: [{
                     name: 'Untitled',
-                    extensions: ['txt', 'sh']
+                    extensions: ['txt', 'sh', 'json']
                 }]
             }).then((filePath) => {
                 console.log(filePath);
@@ -66,22 +66,10 @@ function App() {
     }, []);
 
     useEffect(() => {
-        const registerShortcuts = async () => {
-            await register('Ctrl+S', () => {
-                console.log('Ctrl+S');
-                confirm(text).then((res) => {
-                    console.log(res);
-                    if (res) {
-                        saveFile(text)
-                    }
-                });
-            });
-        };
-        // registerShortcuts();
 
         //listen to a event
         const unlistenSaveClick = listen("save-click", (e) => {
-            confirm(text).then((res) => {
+            confirm('Save file?').then((res) => {
                 console.log(res);
                 if (res) {
                     saveFile(text)
