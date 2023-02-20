@@ -1,0 +1,14 @@
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #747bff);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  color: #f6f6f6;
+  background-color: #2f2f2f;
+}
